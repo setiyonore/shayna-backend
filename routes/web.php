@@ -13,5 +13,5 @@
 
 Route::get('/', 'DashboardController@index');
 
-Auth::routes();
+Auth::routes(['register'=>false]);
 
