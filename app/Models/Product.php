@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class product extends Model
+class Product extends Model
 {
     use SoftDeletes;
     protected $fillable = [
@@ -19,6 +19,6 @@ class product extends Model
     protected $hidden = [];
 
     public function galeries(){
-//        return $this->hasMany(ProductGallery::class,'products_id');
+        return $this->hasMany(ProductGallery::class,'products_id');
     }
 }
