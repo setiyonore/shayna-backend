@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'DashboardController@index')->name('dashboard');
 
 Auth::routes(['register'=>false]);
+Route::get('product/{id}/gallery','ProductController@gallery')->name('products.gallery');
 Route::resource('products','ProductController');
 Route::resource('product-galleries','ProductGalleryController');
