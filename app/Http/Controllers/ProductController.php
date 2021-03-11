@@ -100,6 +100,7 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $item = Product::query()->findOrFail($id)->delete();
+        ProductGallery::query()->where('products_id',$id)->delete();
         return redirect()->route('products.index');
     }
     public function gallery(Request $request,$id){
